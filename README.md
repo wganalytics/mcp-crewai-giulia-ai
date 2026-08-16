@@ -83,7 +83,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO giulia_ro;
 ## Testes
 
 ```bash
-uv run pytest                          # 38 testes do sql_guard (lógica pura, sem banco)
+uv run pytest                          # 58 testes do sql_guard (lógica pura, sem banco)
 ```
 
 Os testes da camada 2 exigem um PostgreSQL de verdade — é o único jeito de provar que
@@ -94,7 +94,7 @@ docker run -d --name prj07-mcp-pg -e POSTGRES_PASSWORD=postgres -p 55432:5432 po
 # crie os bancos e rode os seeds (ver "Pré-requisitos" acima)
 
 export PRJ07_TEST_DSN="postgresql://postgres:postgres@localhost:55432/ecommerce"
-uv run pytest                          # 53 testes (38 + 15 de integração)
+uv run pytest                          # 73 testes (58 + 15 de integração)
 ```
 
 Entre os testes de integração está
