@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "mcp_buscador": {
+      "command": "uv",
+      "args": [
+        "run",
+        "src/server.py"
+      ]
+    }
+  }
+}

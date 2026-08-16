@@ -1,0 +1,26 @@
+database: ecommerce
+description: Base de e-commerce de demonstração
+tables:
+  clientes:
+    description: Clientes cadastrados na loja
+    columns:
+      id: integer (PK)
+      nome: text
+      email: text
+      cidade: text
+  produtos:
+    description: Catálogo de produtos
+    columns:
+      id: integer (PK)
+      nome: text
+      categoria: text
+      preco: numeric
+  pedidos:
+    description: Pedidos realizados pelos clientes
+    columns:
+      id: integer (PK)
+      cliente_id: integer (FK -> clientes.id)
+      produto_id: integer (FK -> produtos.id)
+      quantidade: integer
+      valor_total: numeric
+      data_pedido: date

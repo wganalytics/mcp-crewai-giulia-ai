@@ -1,0 +1,24 @@
+[project]
+name = "prj-07-cap08-crewai"
+version = "0.1.0"
+description = "Text-to-SQL multi-agente sobre MCP com guard de SQL e sessão read-only"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "crewai[anthropic,google-genai,litellm]>=1.6.1",
+    "crewai-tools>=1.6.1",
+    "fastmcp>=3.4.2",
+    "mcp[cli]>=1.28.1",
+    "pandas>=3.0.3",
+    "psycopg2-binary>=2.9.12",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.58.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

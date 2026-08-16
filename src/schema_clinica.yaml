@@ -1,0 +1,24 @@
+database: clinica
+description: Base de clínica médica de demonstração
+tables:
+  pacientes:
+    description: Pacientes da clínica
+    columns:
+      id: integer (PK)
+      nome: text
+      nascimento: date
+      cidade: text
+  medicos:
+    description: Corpo clínico
+    columns:
+      id: integer (PK)
+      nome: text
+      especialidade: text
+  consultas:
+    description: Consultas agendadas/realizadas
+    columns:
+      id: integer (PK)
+      paciente_id: integer (FK -> pacientes.id)
+      medico_id: integer (FK -> medicos.id)
+      data_consulta: date
+      status: text (agendada | realizada | cancelada)
